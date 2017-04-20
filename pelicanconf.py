@@ -4,9 +4,13 @@ from __future__ import unicode_literals
 
 AUTHOR = 'Daniel Gill'
 SITENAME = 'Tetrahedrons & Terminals'
+SITETITLE = SITENAME
 SITEURL = ''
+SITESUBTITLE = u'Thoughts on coding and rpgs'
+SITEDESCRIPTION = u'%s\'s Thoughts and Writings' % AUTHOR
+BROWSER_COLOR = '#5e4d7c'
 
-THEME = 'built-texts'
+THEME = 'themes/flex'
 
 PATH = 'content'
 
@@ -21,15 +25,30 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
+FAVICON = '/images/favicon-red.ico'
+
+STATIC_PATHS = ['images', 'pdfs']
+
+# Menu
+MAIN_MENU = True
+MENUITEMS = (
+	    	('Archives', '/archives.html'),
+             	('Categories', '/categories.html'),
+             	('Tags', '/tags.html'),
+	    )
+
 # Blogroll
-LINKS = (('Pelican', 'http://getpelican.com/'),
-         ('Python.org', 'http://python.org/'),
-         ('Jinja2', 'http://jinja.pocoo.org/'),
-         ('You can modify those links in your config file', '#'),)
+LINKS = (
+            ('Pelican', 'http://getpelican.com/'),
+            ('Python.org', 'http://python.org/'),
+            ('Jinja2', 'http://jinja.pocoo.org/'),
+        )
 
 # Social widget
-SOCIAL = (('Lit & News Tumblr', 'https://dwgill.tumblr.com'),
-          ('Twitter', 'https://twitter.com/danwgill'),)
+SOCIAL = (
+             ('tumblr', 'https://dwgill.tumblr.com'),
+             ('twitter', 'https://twitter.com/danwgill'),
+         )
 
 DEFAULT_PAGINATION = False
 
