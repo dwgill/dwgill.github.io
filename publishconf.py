@@ -10,8 +10,8 @@ import sys
 sys.path.append(os.curdir)
 from pelicanconf import *
 
-# SITEURL = 'https://dwgill.com'
-SITEURL = 'https://dwgill.github.io'
+_use_dwgill_com = True
+
 RELATIVE_URLS = False
 
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
@@ -19,13 +19,19 @@ CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
 
 DELETE_OUTPUT_DIRECTORY = True
 
-# Following items are often useful when publishing
-try:
-    STATIC_PATHS += ['extra/CNAME']
-except NameError: # STATIC_PATHS wasn't defined
-    STATIC_PATHS = ['extra/CNAME']
+if _use_dwgill_com:
+    SITEURL = 'http://dwgill.com'
+    try:
+        STATIC_PATHS += ['extra/CNAME']
+    except NameError: # STATIC_PATHS wasn't defined
+        STATIC_PATHS = ['extra/CNAME']
 
-EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'}}
+    EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'}}
+else:
+    SITEURL = 'https://dwgill.github.io'
+
+
+# Following items are often useful when publishing
 
 #DISQUS_SITENAME = ""
 #GOOGLE_ANALYTICS = ""
