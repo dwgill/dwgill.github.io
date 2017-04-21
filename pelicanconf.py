@@ -8,7 +8,16 @@ SITETITLE = SITENAME
 SITEURL = 'http://localhost:8000'
 SITESUBTITLE = u'Thoughts on coding and rpgs'
 SITEDESCRIPTION = u'%s\'s thoughts and writings on coding & rpgs' % AUTHOR
-BROWSER_COLOR = '#5e4d7c'
+
+_color = {
+    'green': '#ACC18A',
+    'dark_brown': '#333333',
+    'light_brown': '#837a75',
+    'white': '#ffffff',
+    'red': '#DB400C',
+}
+
+BROWSER_COLOR = _color['dark_brown']
 
 THEME = 'themes/flex'
 
@@ -28,7 +37,7 @@ AUTHOR_FEED_RSS = None
 # STATIC_PATHS = ['images', 'pdfs']
 STATIC_PATHS = ['images']
 
-FAVICON = '/images/favicon-red.ico'
+FAVICON = '/images/favicon.ico'
 SITELOGO = '/images/logo.png'
 
 # Menu
