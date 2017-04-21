@@ -1,6 +1,6 @@
 title: This Blog Runs on Pelican
-Date: 2017-04-20 12:00
-Modified: 2017-04-20 12:00
+Date: 2017-04-21 13:53
+Modified: 2017-04-21 13:53
 Category: code
 Tags: code, python, personal projects
 Slug: this-blog-runs-on-pelican
