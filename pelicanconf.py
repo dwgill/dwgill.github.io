@@ -8,6 +8,7 @@ SITETITLE = SITENAME
 SITEURL = 'http://localhost:8000'
 SITESUBTITLE = u'Thoughts on coding and rpgs'
 SITEDESCRIPTION = u'%s\'s thoughts and writings on coding & rpgs' % AUTHOR
+COPYRIGHT_YEAR = 2017
 
 _color = {
     'green': '#ACC18A',
@@ -27,6 +28,12 @@ TIMEZONE = 'America/Detroit'
 
 DEFAULT_LANG = 'en'
 
+ARTICLE_URL = 'posts/{date:%Y}/{date:%m}/{date:%d}/{slug}/'
+ARTICLE_SAVE_AS = 'posts/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
+PAGE_URL = 'pages/{slug}/'
+PAGE_SAVE_AS = 'pages/{slug}/index.html'
+
+
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
@@ -36,6 +43,10 @@ AUTHOR_FEED_RSS = None
 
 # STATIC_PATHS = ['images', 'pdfs']
 STATIC_PATHS = ['images']
+
+# Insure that the CNAME file is toplevel so Github can find it
+# STATIC_PATHS += ['extra/CNAME']
+# EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'}}
 
 FAVICON = '/images/favicon.ico'
 SITELOGO = '/images/logo.png'
