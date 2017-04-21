@@ -20,6 +20,12 @@ CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
 DELETE_OUTPUT_DIRECTORY = True
 
 # Following items are often useful when publishing
+try:
+    STATIC_PATHS += ['extra/CNAME']
+except NameError: # STATIC_PATHS wasn't defined
+    STATIC_PATHS = ['extra/CNAME']
+
+EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'}}
 
 #DISQUS_SITENAME = ""
 #GOOGLE_ANALYTICS = ""

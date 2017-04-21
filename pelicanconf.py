@@ -45,8 +45,6 @@ AUTHOR_FEED_RSS = None
 STATIC_PATHS = ['images']
 
 # Insure that the CNAME file is toplevel so Github can find it
-# STATIC_PATHS += ['extra/CNAME']
-# EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'}}
 
 FAVICON = '/images/favicon.ico'
 SITELOGO = '/images/logo.png'
