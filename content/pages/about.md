@@ -1,8 +1,6 @@
 title: About
 Date: 2017-04-21 13:56
 Modified: 2017-04-21 13:56
-Category: etc.
-Tags: meta
 Slug: about
 Authors: Daniel Gill
 Summary: Site introduction & about
