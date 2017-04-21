@@ -44,7 +44,17 @@ AUTHOR_FEED_RSS = None
 # STATIC_PATHS = ['images', 'pdfs']
 STATIC_PATHS = ['images']
 
-# Insure that the CNAME file is toplevel so Github can find it
+MARKDOWN = {
+    'extension_configs': {
+        # Default
+        'markdown.extensions.codehilite': {'css_class': 'highlight'},
+        'markdown.extensions.extra': {},
+        'markdown.extensions.meta': {},
+        # My config
+        'markdown.extensions.tables': {},
+        'markdown.extensions.footnotes': {},
+    },
+}
 
 FAVICON = '/images/favicon.ico'
 SITELOGO = '/images/logo.png'
