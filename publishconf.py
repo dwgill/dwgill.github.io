@@ -10,7 +10,6 @@ import sys
 sys.path.append(os.curdir)
 from pelicanconf import *
 
-_use_dwgill_com = True
 
 RELATIVE_URLS = False
 
@@ -19,7 +18,8 @@ CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
 
 DELETE_OUTPUT_DIRECTORY = True
 
-if _use_dwgill_com:
+_use_custom_domain = True
+if _use_custom_domain:
     SITEURL = 'http://dwgill.com'
     try:
         STATIC_PATHS += ['extra/CNAME']
