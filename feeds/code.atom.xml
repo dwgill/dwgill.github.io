@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tetrahedrons &amp; Terminals - code</title><link href="http://dwgill.github.io/" rel="alternate"></link><link href="http://dwgill.github.io/feeds/code.atom.xml" rel="self"></link><id>http://dwgill.github.io/</id><updated>2017-04-21T13:53:00-04:00</updated><entry><title>This Blog Runs on Pelican</title><link href="http://dwgill.github.io/posts/2017/04/21/this-blog-runs-on-pelican/" rel="alternate"></link><published>2017-04-21T13:53:00-04:00</published><updated>2017-04-21T13:53:00-04:00</updated><author><name>Daniel Gill</name></author><id>tag:dwgill.github.io,2017-04-21:/posts/2017/04/21/this-blog-runs-on-pelican/</id><summary type="html">&lt;p&gt;A detailed breakdown of how this blog is coded &amp;amp; built&lt;/p&gt;</summary><content type="html">&lt;p&gt;This blog is built using the &lt;a href="https://blog.getpelican.com/"&gt;Pelican&lt;/a&gt; static site generator,
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tetrahedrons &amp; Terminals - code</title><link href="https://dwgill.github.io/" rel="alternate"></link><link href="https://dwgill.github.io/feeds/code.atom.xml" rel="self"></link><id>https://dwgill.github.io/</id><updated>2017-04-21T13:53:00-04:00</updated><entry><title>This Blog Runs on Pelican</title><link href="https://dwgill.github.io/posts/2017/04/21/this-blog-runs-on-pelican/" rel="alternate"></link><published>2017-04-21T13:53:00-04:00</published><updated>2017-04-21T13:53:00-04:00</updated><author><name>Daniel Gill</name></author><id>tag:dwgill.github.io,2017-04-21:/posts/2017/04/21/this-blog-runs-on-pelican/</id><summary type="html">&lt;p&gt;A detailed breakdown of how this blog is coded &amp;amp; built&lt;/p&gt;</summary><content type="html">&lt;p&gt;This blog is built using the &lt;a href="https://blog.getpelican.com/"&gt;Pelican&lt;/a&gt; static site generator,
 written in &lt;a href="https://en.wikipedia.org/wiki/Python_(programming_language)"&gt;Python&lt;/a&gt;, and utilizes the &lt;a href="https://github.com/alexandrevicenzi/Flex"&gt;Flex&lt;/a&gt; pelican theme.
 I'm actually writing this post as I set up the site for the first time,
 partially so that I can document everything for myself, and hopefully
@@ -28,7 +28,7 @@ out a name for this blog notwithstanding), but the next step was
 bettering the look of the site. The default look of Pelican is not the
 greatest. For example, &lt;a href="https://blog.getpelican.com/"&gt;here&lt;/a&gt; is the official Pelican
 website at the time of this writing:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="getpelican.com circa 2017" src="http://dwgill.github.io/images/code/getpelican-site-2017-04-20.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="getpelican.com circa 2017" src="https://dwgill.github.io/images/code/getpelican-site-2017-04-20.png"&gt;&lt;/p&gt;
 &lt;p&gt;Not my style, and not responsive besides. I looked through the themes
 available on &lt;a href="http://www.pelicanthemes.com/"&gt;pelicanthemes.com&lt;/a&gt; and found &lt;a href="https://github.com/alexandrevicenzi/Flex"&gt;Flex&lt;/a&gt; to be to my
 taste while not complicating things too much up front. Pelican seems to
