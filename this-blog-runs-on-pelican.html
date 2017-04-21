@@ -1,0 +1,242 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="https://dwgill.github.com/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="https://dwgill.github.com/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="https://dwgill.github.com/theme/font-awesome/css/font-awesome.min.css">
+
+
+    <link href="https://dwgill.github.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Tetrahedrons & Terminals Atom">
+
+
+    <link rel="shortcut icon" href="/images/favicon-red.ico" type="image/x-icon">
+    <link rel="icon" href="/images/favicon-red.ico" type="image/x-icon">
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#5e4d7c">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#5e4d7c">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<meta name="author" content="Daniel Gill" />
+<meta name="description" content="A detailed breakdown of how this blog is coded & built" />
+<meta name="keywords" content="code, python, personal projects">
+<meta property="og:site_name" content="Tetrahedrons & Terminals"/>
+<meta property="og:title" content="This Blog Runs on Pelican"/>
+<meta property="og:description" content="A detailed breakdown of how this blog is coded & built"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://dwgill.github.com/this-blog-runs-on-pelican.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2017-04-20 12:00:00-04:00"/>
+<meta property="article:modified_time" content="2017-04-20 12:00:00-04:00"/>
+<meta property="article:author" content="https://dwgill.github.com/author/daniel-gill.html">
+<meta property="article:section" content="code"/>
+<meta property="article:tag" content="code"/>
+<meta property="article:tag" content="python"/>
+<meta property="article:tag" content="personal projects"/>
+<meta property="og:image" content="">
+
+  <title>Tetrahedrons & Terminals &ndash; This Blog Runs on Pelican</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="https://dwgill.github.com">
+        <img src="https://dwgill.github.com/theme/img/profile.png" alt="Tetrahedrons & Terminals" title="Tetrahedrons & Terminals">
+      </a>
+      <h1><a href="https://dwgill.github.com">Tetrahedrons & Terminals</a></h1>
+
+<p>Thoughts on coding and rpgs</p>
+      <nav>
+        <ul class="list">
+          <li><a href="https://dwgill.github.com/pages/about.html#about">About</a></li>
+
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li><a class="sc-tumblr" href="https://dwgill.tumblr.com" target="_blank"><i class="fa fa-tumblr"></i></a></li>
+        <li><a class="sc-twitter" href="https://twitter.com/danwgill" target="_blank"><i class="fa fa-twitter"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="https://dwgill.github.com">    Home
+</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+
+      <a href="https://dwgill.github.com/feeds/all.atom.xml">    Atom
+</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+    <h1 id="this-blog-runs-on-pelican">This Blog Runs on Pelican</h1>
+    <p>
+          Posted on Thu 20 April 2017 in <a href="https://dwgill.github.com/category/code.html">code</a>
+
+
+    </p>
+  </header>
+
+
+  <div>
+    <p>This blog is built using the <a href="https://blog.getpelican.com/">Pelican</a> static site generator,
+written in <a href="https://en.wikipedia.org/wiki/Python_(programming_language)">Python</a>, and utilizes the <a href="https://github.com/alexandrevicenzi/Flex">Flex</a> pelican theme.
+I'm actually writing this post as I set up the site for the first time,
+partially so that I can document everything for myself, and hopefully
+because it will be of some use for anyone else who finds him-or-herself
+dealing with this in the future.</p>
+<p>Pelican is a static site generator, which means basically that allows me
+to write content for this blog in simple <a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a> files,
+and uses those files to generate the individual pages of this website.
+It takes my markdown files as input, and outputs the entire body of
+html files that comprise this website. I can then take those html
+files and host them anywhere I like—on my own server, or on 
+<a href="https://pages.github.com/">Github Pages</a>, etc.</p>
+<p>Pelican has a pretty simple quickstart process, which can be found
+<a href="http://docs.getpelican.com/en/stable/install.html">here</a>. Altogether my first steps looked like the
+following:</p>
+<div class="highlight"><pre><span></span>cd &lt;project_dir&gt;
+virtualenv .venv
+source .venv/bin/activate
+pip install pelican markdown
+pelican-quickstart
+</pre></div>
+
+
+<p>That was straightforward enough (the living hell of trying to figure)
+out a name for this blog notwithstanding), but the next step was
+bettering the look of the site. The default look of Pelican is not the
+greatest. For example, <a href="https://blog.getpelican.com/">here</a> is the official Pelican
+website at the time of this writing:</p>
+<p><img alt="getpelican.com circa 2017" src="https://dwgill.github.com/images/code/getpelican-site-2017-04-20.png"></p>
+<p>Not my style, and not responsive besides. I looked through the themes
+available on <a href="http://www.pelicanthemes.com/">pelicanthemes.com</a> and found <a href="https://github.com/alexandrevicenzi/Flex">Flex</a> to be to my
+taste while not complicating things too much up front. Pelican seems to
+half-expect you to install themes via the <code>pelican-themes</code> program
+which is installed alongside Pelican, but that seems to operate by
+installing themes on a system wide basis and I preferred to have the
+project self-contained in my Git repo as much as possible. I ended up
+going with putting the Flex's git repo in a git
+<a href="https://git-scm.com/docs/git-submodule">submodule</a> of my project repository. An introduction to 
+Git is beyond the purview of this article (I got myself familiar with it 
+with the <a href="https://www.codeschool.com/courses/git-real">Code School course</a>, personally), but
+<a href="https://git-scm.com/docs/git-submodule">Git submodules</a> aren't all that common, and as that's
+what I ended up going with I figured I might detail what I did. At the
+very least, it will be useful when I come back in a while wondering how
+the devil you're supposed to handle a Git submodule.</p>
+<p>I added the flex repo to my project like so:</p>
+<div class="highlight"><pre><span></span>mkdir themes
+git submodule add https://github.com/alexandrevicenzi/Flex themes/flex
+</pre></div>
+
+
+<p>I'm unsure if this did both the work of formally adding the
+submodule to the project (i.e. creating/modifying the <code>.gitmodules</code>
+file) <em>and</em> checking out the contents the submodule, but it may be the
+case when a new submodule is added that you still need to initiate the
+process of cloning/checking out the repo. You can do this with the
+following:</p>
+<div class="highlight"><pre><span></span>git submodule update --init themes/flex
+</pre></div>
+
+
+<p>With that command the entire contents of the <a href="https://github.com/alexandrevicenzi/Flex">Flex</a> repo should
+be in the local directory <code>themes/flex</code>, which means I can now add the
+theme to my Pelican configuration <code>pelicanconf.py</code>:</p>
+<div class="highlight"><pre><span></span>THEME = &#39;themes/flex&#39;
+</pre></div>
+
+
+<p>The theme is straightforward enough, but not as documented as it could
+be, and I'm having to figure out some details by looking at the
+<a href="https://github.com/alexandrevicenzi/Flex/blob/master/tests/pelicanconf.py">test configuration</a>. For example, it turns out you need
+to explicitly enable &amp; configure the menu menu at the top of the page;
+it doesn't just list whatever 'pages' you have on your site:</p>
+<div class="highlight"><pre><span></span>MAIN_MENU = True
+MENUITEMS = (
+    (&#39;Archives&#39;, &#39;/archives.html&#39;),
+    (&#39;Categories&#39;, &#39;/categories.html&#39;),
+    (&#39;Tags&#39;, &#39;/tags.html&#39;),
+)
+</pre></div>
+
+
+<p>Additionally—and I'm not sure if this is specific to the Flex theme or
+how you configure it for Pelican sites in general—I found that the
+Favicon could be configured by setting the <code>FAVICON</code> variable in my
+configuration, like so:</p>
+<div class="highlight"><pre><span></span>PATH = &#39;content&#39;
+STATIC_PATHS = [&#39;images&#39;]
+FAVICON = &#39;/images/favicon-red.ico&#39;
+</pre></div>
+
+
+<p>In this case <code>images/</code> is a subdirectory of my <code>content/</code> folder, which
+is where I put all of my site content, and futhermore I specify that
+<code>images</code> is one of my <code>STATIC_PATHS</code>, which I believe means the contents
+of <code>images</code> will be included in the generated site output irrespective of
+whether Pelican finds any markdown posts in it to generate into articles.</p>
+<p>I'm now going to try and get this site up on my Github pages, which means
+if you're reading this you can expect an update shortly on how I did
+that.</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://dwgill.github.com/tag/code.html">code</a>
+      <a href="https://dwgill.github.com/tag/python.html">python</a>
+      <a href="https://dwgill.github.com/tag/personal-projects.html">personal projects</a>
+    </p>
+  </div>
+
+
+    <div class="addthis_relatedposts_inline">
+
+
+</article>
+
+    <footer>
+<p>&copy; Daniel Gill </p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p>    </footer>
+  </main>
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Tetrahedrons & Terminals ",
+  "url" : "https://dwgill.github.com",
+  "image": "",
+  "description": "Daniel Gill's thoughts and writings on coding & rpgs"
+}
+</script>
+
+</body>
+</html>
