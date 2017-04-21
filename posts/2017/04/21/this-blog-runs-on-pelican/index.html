@@ -202,7 +202,49 @@ whether Pelican finds any markdown posts in it to generate into articles.</p>
 <p>I'm now going to try and get this site up on my Github pages, which means
 if you're reading this you can expect an update shortly on how I did
 that.</p>
-<p><strong>UPDATE ():</strong></p>
+<p><strong>UPDATE:</strong></p>
+<p>So, getting it up on github pages had some snags. The biggest one I
+learned—and I believe this is particular to the configuration of the
+Flex theme—is that it is crucial that the <code>SITEURL</code> variable accurately
+reflex whatever URL the reader's browser is using to access the page.
+I had an initial goof where I set my <code>SITEURL</code> to <code>dwgill.github.com</code>
+and it broke all the CSS, as the webpage was requesting all of its
+assets at the wrong domain. The maddening thing was is that Github will
+try to gracefully redirect you to the corresponding page on
+<code>*.github.io</code>, but that is still enough to break assets, even if the
+link ends up looking perfectly valid when I visit it in my browser.</p>
+<p>The other tricky thing was setting up the CNAME, but the <a href="http://docs.getpelican.com/en/stable/tips.html#extra-tips">Pelican
+documentation lays that out</a> pretty neatly (once you find
+the corner of the documentation it's hidden in).</p>
+<p>So, all told my configuration for github pages amounts to these lines in
+my publish config file.</p>
+<div class="highlight"><pre><span></span>_use_custom_domain = True
+if _use_custom_domain:
+    SITEURL = &#39;http://dwgill.com&#39;
+    try:
+        STATIC_PATHS += [&#39;extra/CNAME&#39;]
+    except NameError: # STATIC_PATHS wasn&#39;t defined
+        STATIC_PATHS = [&#39;extra/CNAME&#39;]
+
+    EXTRA_PATH_METADATA = {&#39;extra/CNAME&#39;: {&#39;path&#39;: &#39;CNAME&#39;}}
+else:
+    SITEURL = &#39;https://dwgill.github.io&#39;
+</pre></div>
+
+
+<p>This both sets the value of <code>SITEURL</code> and insures the <code>CNAME</code> file in
+<code>/content/extra</code> will be output on the top level of the project as
+<code>/CNAME</code>. The content of <code>CNAME</code> is just the following.</p>
+<div class="highlight"><pre><span></span>dwgill.com
+</pre></div>
+
+
+<p>This basically means that Github will look at the content of that CNAME,
+and any requests it receives at its ip addresses of <code>192.30.252.153</code> and
+<code>192.30.252.154</code> addressed to <code>dwgill.com</code> will be served the files in
+my project repo. All I had to do next was point my domain of
+<code>dwgill.com</code> at those ip addresses. The documentation for this can be
+found <a href="https://help.github.com/articles/setting-up-an-apex-domain/">here</a>.</p>
   </div>
   <div class="tag-cloud">
     <p>

@@ -99,4 +99,46 @@ whether Pelican finds any markdown posts in it to generate into articles.&lt;/p&
 &lt;p&gt;I'm now going to try and get this site up on my Github pages, which means
 if you're reading this you can expect an update shortly on how I did
 that.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;UPDATE ():&lt;/strong&gt;&lt;/p&gt;</content><category term="code"></category><category term="python"></category><category term="personal projects"></category></entry></feed>
+&lt;p&gt;&lt;strong&gt;UPDATE:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;So, getting it up on github pages had some snags. The biggest one I
+learned—and I believe this is particular to the configuration of the
+Flex theme—is that it is crucial that the &lt;code&gt;SITEURL&lt;/code&gt; variable accurately
+reflex whatever URL the reader's browser is using to access the page.
+I had an initial goof where I set my &lt;code&gt;SITEURL&lt;/code&gt; to &lt;code&gt;dwgill.github.com&lt;/code&gt;
+and it broke all the CSS, as the webpage was requesting all of its
+assets at the wrong domain. The maddening thing was is that Github will
+try to gracefully redirect you to the corresponding page on
+&lt;code&gt;*.github.io&lt;/code&gt;, but that is still enough to break assets, even if the
+link ends up looking perfectly valid when I visit it in my browser.&lt;/p&gt;
+&lt;p&gt;The other tricky thing was setting up the CNAME, but the &lt;a href="http://docs.getpelican.com/en/stable/tips.html#extra-tips"&gt;Pelican
+documentation lays that out&lt;/a&gt; pretty neatly (once you find
+the corner of the documentation it's hidden in).&lt;/p&gt;
+&lt;p&gt;So, all told my configuration for github pages amounts to these lines in
+my publish config file.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;_use_custom_domain = True
+if _use_custom_domain:
+    SITEURL = &amp;#39;http://dwgill.com&amp;#39;
+    try:
+        STATIC_PATHS += [&amp;#39;extra/CNAME&amp;#39;]
+    except NameError: # STATIC_PATHS wasn&amp;#39;t defined
+        STATIC_PATHS = [&amp;#39;extra/CNAME&amp;#39;]
+
+    EXTRA_PATH_METADATA = {&amp;#39;extra/CNAME&amp;#39;: {&amp;#39;path&amp;#39;: &amp;#39;CNAME&amp;#39;}}
+else:
+    SITEURL = &amp;#39;https://dwgill.github.io&amp;#39;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This both sets the value of &lt;code&gt;SITEURL&lt;/code&gt; and insures the &lt;code&gt;CNAME&lt;/code&gt; file in
+&lt;code&gt;/content/extra&lt;/code&gt; will be output on the top level of the project as
+&lt;code&gt;/CNAME&lt;/code&gt;. The content of &lt;code&gt;CNAME&lt;/code&gt; is just the following.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;dwgill.com
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This basically means that Github will look at the content of that CNAME,
+and any requests it receives at its ip addresses of &lt;code&gt;192.30.252.153&lt;/code&gt; and
+&lt;code&gt;192.30.252.154&lt;/code&gt; addressed to &lt;code&gt;dwgill.com&lt;/code&gt; will be served the files in
+my project repo. All I had to do next was point my domain of
+&lt;code&gt;dwgill.com&lt;/code&gt; at those ip addresses. The documentation for this can be
+found &lt;a href="https://help.github.com/articles/setting-up-an-apex-domain/"&gt;here&lt;/a&gt;.&lt;/p&gt;</content><category term="code"></category><category term="python"></category><category term="personal projects"></category></entry></feed>
