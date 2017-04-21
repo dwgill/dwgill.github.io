@@ -2,7 +2,7 @@ title: This Blog Runs on Pelican
 Date: 2017-04-20 12:00
 Modified: 2017-04-20 12:00
 Category: code
-Tags: code, python, pelican, projects
+Tags: code, python, personal projects
 Slug: this-blog-runs-on-pelican
 Authors: Daniel Gill
 Summary: A detailed breakdown of how this blog is coded & built
@@ -43,16 +43,16 @@ website at the time of this writing:
 ![getpelican.com circa 2017]({filename}/images/code/getpelican-site-2017-04-20.png)
 
 Not my style, and not responsive besides. I looked through the themes
-available on [pelicanthemes.com][] and found [Flex][flex] to my taste
-while not complicating things too much up front. Pelican seems to
+available on [pelicanthemes.com][] and found [Flex][flex] to be to my
+taste while not complicating things too much up front. Pelican seems to
 half-expect you to install themes via the `pelican-themes` program
 which is installed alongside Pelican, but that seems to operate by
 installing themes on a system wide basis and I preferred to have the
 project self-contained in my Git repo as much as possible. I ended up
-going with putting the Flex's git repo in a git [submodule][git-submodule]
-of my project repository. An introduction to Git is beyond the purview
-of this article (I got myself familiar with it with the
-[Code School course][git], personally), but
+going with putting the Flex's git repo in a git
+[submodule][git-submodule] of my project repository. An introduction to 
+Git is beyond the purview of this article (I got myself familiar with it 
+with the [Code School course][git], personally), but
 [Git submodules][git-submodule] aren't all that common, and as that's
 what I ended up going with I figured I might detail what I did. At the
 very least, it will be useful when I come back in a while wondering how
@@ -63,20 +63,52 @@ I added the flex repo to my project like so:
     mkdir themes
     git submodule add https://github.com/alexandrevicenzi/Flex themes/flex
 
-I'm unsure if this did both the work of the formally adding the
+I'm unsure if this did both the work of formally adding the
 submodule to the project (i.e. creating/modifying the `.gitmodules`
 file) _and_ checking out the contents the submodule, but it may be the
 case when a new submodule is added that you still need to initiate the
 process of cloning/checking out the repo. You can do this with the
 following:
 
-    git submodule update themes/flex
+    git submodule update --init themes/flex
 
 With that command the entire contents of the [Flex][flex] repo should
 be in the local directory `themes/flex`, which means I can now add the
-theme to my Pelican configuration:
+theme to my Pelican configuration `pelicanconf.py`:
 
     THEME = 'themes/flex'
+
+The theme is straightforward enough, but not as documented as it could
+be, and I'm having to figure out some details by looking at the
+[test configuration][pelican-test]. For example, it turns out you need
+to explicitly enable & configure the menu menu at the top of the page;
+it doesn't just list whatever 'pages' you have on your site:
+
+    MAIN_MENU = True
+    MENUITEMS = (
+        ('Archives', '/archives.html'),
+        ('Categories', '/categories.html'),
+        ('Tags', '/tags.html'),
+    )
+
+Additionally—and I'm not sure if this is specific to the Flex theme or
+how you configure it for Pelican sites in general—I found that the
+Favicon could be configured by setting the `FAVICON` variable in my
+configuration, like so:
+
+    PATH = 'content'
+    STATIC_PATHS = ['images']
+    FAVICON = '/images/favicon-red.ico'
+
+In this case `images/` is a subdirectory of my `content/` folder, which
+is where I put all of my site content, and futhermore I specify that
+`images` is one of my `STATIC_PATHS`, which I believe means the contents
+of `images` will be included in the generated site output irrespective of
+whether Pelican finds any markdown posts in it to generate into articles.
+
+I'm now going to try and get this site up on my Github pages, which means
+if you're reading this you can expect an update shortly on how I did
+that.
 
 [pelican]: https://blog.getpelican.com/
 [python]: https://en.wikipedia.org/wiki/Python_(programming_language)
@@ -88,3 +120,4 @@ theme to my Pelican configuration:
 [pelicanthemes.com]: http://www.pelicanthemes.com/
 [git]: https://www.codeschool.com/courses/git-real
 [git-submodule]: https://git-scm.com/docs/git-submodule
+[pelican-test]: https://github.com/alexandrevicenzi/Flex/blob/master/tests/pelicanconf.py
