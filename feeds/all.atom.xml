@@ -1,5 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tetrahedrons &amp; Terminals</title><link href="http://dwgill.com/" rel="alternate"></link><link href="http://dwgill.com/feeds/all.atom.xml" rel="self"></link><id>http://dwgill.com/</id><updated>2017-04-21T15:19:00-04:00</updated><entry><title>This Blog Runs on Pelican</title><link href="http://dwgill.com/posts/2017/04/21/this-blog-runs-on-pelican/" rel="alternate"></link><published>2017-04-21T13:53:00-04:00</published><updated>2017-04-21T15:19:00-04:00</updated><author><name>Daniel Gill</name></author><id>tag:dwgill.com,2017-04-21:/posts/2017/04/21/this-blog-runs-on-pelican/</id><summary type="html">&lt;p&gt;A detailed breakdown of how this blog is coded &amp;amp; built&lt;/p&gt;</summary><content type="html">&lt;p&gt;This blog is built using the &lt;a href="https://blog.getpelican.com/"&gt;Pelican&lt;/a&gt; static site generator,
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tetrahedrons &amp; Terminals</title><link href="http://dwgill.com/" rel="alternate"></link><link href="http://dwgill.com/feeds/all.atom.xml" rel="self"></link><id>http://dwgill.com/</id><updated>2017-04-22T10:46:00-04:00</updated><entry><title>Keeping Notes on Secret Doors</title><link href="http://dwgill.com/posts/2017/04/22/keeping-notes-on-secret-doors/" rel="alternate"></link><published>2017-04-22T10:46:00-04:00</published><updated>2017-04-22T10:46:00-04:00</updated><author><name>Daniel Gill</name></author><id>tag:dwgill.com,2017-04-22:/posts/2017/04/22/keeping-notes-on-secret-doors/</id><summary type="html">&lt;p&gt;Some notes on documenting secret doors in Dungeons &amp;amp; Dragons&lt;/p&gt;</summary><content type="html">&lt;p&gt;I started semi-regularly running games of Dungeons &amp;amp; Dragons recently,
+and I've since been devouring all the advice on it I can read. I'm
+particularly fond of the &lt;a href="https://media.wizards.com/2017/dnd/downloads/0227_UATraps.pdf"&gt;Unearthed Arcana on the subject&lt;/a&gt;
+that Wizards of the Coast released a few months back, and appreciated
+the structure suggested therein in articulating a trap: &lt;em&gt;Level and
+Threat&lt;/em&gt;, &lt;em&gt;Trigger&lt;/em&gt;, and &lt;em&gt;Effect&lt;/em&gt;. I've found this very useful in
+guiding my thinking, and thought something similar might be useful in
+describing secret doors and passages.&lt;/p&gt;
+&lt;h2&gt;A Tentative Format for Describing Secret Doors&lt;/h2&gt;
+&lt;p&gt;The tentative elements I've come up with are the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Concealment:&lt;/em&gt; A description of the door/mechanism and how it is
+  obscured from immediate detection or otherwise obstructs wanderers
+  from opening it.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Trigger:&lt;/em&gt; Detail of how the door/mechanism is opened/operated.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Discovery:&lt;/em&gt; Example means by which characters might discover
+  the secret door and determine how to open it.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Destination:&lt;/em&gt; What opening the secret door uncovers and/or where the
+  hidden passage leads.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Example Secret Doors&lt;/h2&gt;
+&lt;p&gt;I'm currently building a dungeon set in an ancient, abandoned Dwarven
+mine, so I'll share the two secret doors I've come up with for that
+project here. &lt;/p&gt;
+&lt;h3&gt;Drarven Statue&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Concealment:&lt;/em&gt; A statue of a stately dwarf stands in the corner of a
+  fork in the dungeon, extending an arm that raises an axe above his
+  head.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Trigger:&lt;/em&gt; Pull the arm down like a lever. It ratchets with a winding
+  sound until it reaches the bottom of its arc, then the statue pulls 
+  backward like a door on a hinge while the arm raises.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Discovery:&lt;/em&gt; A DC 15 Wisdom (Perception) check of the statue reveals
+  seams around the base of the arm. A DC 15 Investigation check of
+  the corner in general reveals a hallow sound to the walls about
+  the corner, suggesting there is space in the interior.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Destination:&lt;/em&gt; Opens into a cramped passage that leads directly to a
+  hidden room full of treasure where a mimic lies in wait.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Banquet Hall Mosaic&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Concealment:&lt;/em&gt; An elaborate 20 ft. mosaic that decorates a large
+  banquet hall in the west end of the dungeon, depicting a great battle
+  between the founders of the mine and hostile invaders, and obscuring
+  a secret door embedded in the wall itself.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Trigger:&lt;/em&gt; Press in the eyes of the central heroic dwarf, and the door
+  will unhook from the wall on one side and drift slightly forward on a
+  hinge, eventually revealing a 5' wide opening if pulled the rest of
+  the way. &lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Discovery:&lt;/em&gt; A DC 18 Wisdom (Perception) check reveals the fine seams
+  that outline the door. A DC 15 Intelligence (Investigation) check
+  determines that the aforementioned eyes of the hero of the mosaic have
+  a polished or worn quality to them, indicative of how more frequently
+  they were touched compared to the rest of the mosaic. &lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Destination:&lt;/em&gt; The door opens into a passageway that goes down to
+  the second floor of the dungeon, leading to hidden cells where secret
+  prisoners were once kept.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;I'm not sure how practical it is to use this format for describing
+secret doors in my notes in preparing for sessions. I'm still new to
+dungeon mastering, and I'm not sure how verbose I'm ultimately going
+to want my notes to be. Regardless, I think I'm finding it useful in
+guiding my thinking in designing secret doors. &lt;/p&gt;</content><category term="rpg"></category><category term="d&amp;d"></category><category term="d&amp;d 5e"></category><category term="game mastering"></category><category term="secret doors"></category></entry><entry><title>This Blog Runs on Pelican</title><link href="http://dwgill.com/posts/2017/04/21/this-blog-runs-on-pelican/" rel="alternate"></link><published>2017-04-21T13:53:00-04:00</published><updated>2017-04-21T15:19:00-04:00</updated><author><name>Daniel Gill</name></author><id>tag:dwgill.com,2017-04-21:/posts/2017/04/21/this-blog-runs-on-pelican/</id><summary type="html">&lt;p&gt;A detailed breakdown of how this blog is coded &amp;amp; built&lt;/p&gt;</summary><content type="html">&lt;p&gt;This blog is built using the &lt;a href="https://blog.getpelican.com/"&gt;Pelican&lt;/a&gt; static site generator,
 written in &lt;a href="https://en.wikipedia.org/wiki/Python_(programming_language)"&gt;Python&lt;/a&gt;, and utilizes the &lt;a href="https://github.com/alexandrevicenzi/Flex"&gt;Flex&lt;/a&gt; pelican theme.
 I'm actually writing this post as I set up the site for the first time,
 partially so that I can document everything for myself, and hopefully
@@ -28,7 +91,7 @@ out a name for this blog notwithstanding), but the next step was
 bettering the look of the site. The default look of Pelican is not the
 greatest. For example, &lt;a href="https://blog.getpelican.com/"&gt;here&lt;/a&gt; is the official Pelican
 website at the time of this writing:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="getpelican.com circa 2017" src="http://dwgill.com/images/code/getpelican-site-2017-04-20.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="getpelican.com circa 2017" src="http://dwgill.com/images/code/getpelican-site-2017-04-20.png" /&gt;&lt;/p&gt;
 &lt;p&gt;Not my style, and not responsive besides. I looked through the themes
 available on &lt;a href="http://www.pelicanthemes.com/"&gt;pelicanthemes.com&lt;/a&gt; and found &lt;a href="https://github.com/alexandrevicenzi/Flex"&gt;Flex&lt;/a&gt; to be to my
 taste while not complicating things too much up front. Pelican seems to

@@ -28,7 +28,7 @@ out a name for this blog notwithstanding), but the next step was
 bettering the look of the site. The default look of Pelican is not the
 greatest. For example, &lt;a href="https://blog.getpelican.com/"&gt;here&lt;/a&gt; is the official Pelican
 website at the time of this writing:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="getpelican.com circa 2017" src="http://dwgill.com/images/code/getpelican-site-2017-04-20.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="getpelican.com circa 2017" src="http://dwgill.com/images/code/getpelican-site-2017-04-20.png" /&gt;&lt;/p&gt;
 &lt;p&gt;Not my style, and not responsive besides. I looked through the themes
 available on &lt;a href="http://www.pelicanthemes.com/"&gt;pelicanthemes.com&lt;/a&gt; and found &lt;a href="https://github.com/alexandrevicenzi/Flex"&gt;Flex&lt;/a&gt; to be to my
 taste while not complicating things too much up front. Pelican seems to
