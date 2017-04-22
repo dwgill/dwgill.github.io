@@ -11,10 +11,9 @@ sys.path.append(os.curdir)
 from pelicanconf import *
 
 
+# Relative URLs break RSS & Atom feeds
 RELATIVE_URLS = False
 
-FEED_ALL_ATOM = 'feeds/all.atom.xml'
-CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
 
 DELETE_OUTPUT_DIRECTORY = True
 
@@ -26,10 +25,22 @@ if _use_custom_domain:
     except NameError: # STATIC_PATHS wasn't defined
         STATIC_PATHS = ['extra/CNAME']
 
-    EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'}}
+    try:
+        EXTRA_PATH_METADATA.update({
+            'extra/CNAME': {'path': 'CNAME'}
+        })
+    except NameError: # EXTRA_PATH_METADATA wasn't defined
+        EXTRA_PATH_METADATA = {
+            'extra/CNAME': {'path': 'CNAME'}
+        }
 else:
     SITEURL = 'https://dwgill.github.io'
 
+
+FEED_ALL_ATOM = 'feeds/all.atom.xml'
+CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
+
+SOCIAL.append(('rss', SITEURL + '/' + FEED_ALL_ATOM))
 
 # Following items are often useful when publishing
 

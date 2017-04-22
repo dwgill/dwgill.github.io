@@ -44,6 +44,7 @@ AUTHOR_FEED_RSS = None
 # STATIC_PATHS = ['images', 'pdfs']
 STATIC_PATHS = ['images']
 
+# Sets the extensions available in the markdown config
 MARKDOWN = {
     'extension_configs': {
         # Default
@@ -56,29 +57,32 @@ MARKDOWN = {
     },
 }
 
+# Path to the favicon in the /content directory
 FAVICON = '/images/favicon.ico'
+# Path to the site logo in the /content directory
 SITELOGO = '/images/logo.png'
 
-# Menu
+# Have a main menu at the top of the screen
 MAIN_MENU = True
-MENUITEMS = (
+# What items go in the menu
+MENUITEMS = [
     ('Archives', '/archives.html'),
     ('Categories', '/categories.html'),
     ('Tags', '/tags.html'),
-)
+]
 
 # Blogroll
-LINKS = (
+LINKS = [
     # ('Pelican', 'http://getpelican.com/'),
     # ('Python.org', 'http://python.org/'),
     # ('Jinja2', 'http://jinja.pocoo.org/'),
-)
+]
 
 # Social widget
-SOCIAL = (
+SOCIAL = [
     ('tumblr', 'https://dwgill.tumblr.com'),
     ('twitter', 'https://twitter.com/danwgill'),
-)
+]
 
 DEFAULT_PAGINATION = False
 
