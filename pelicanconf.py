@@ -18,6 +18,9 @@ _color = {
     'red': '#DB400C',
 }
 
+# Should be overridden in production
+USE_LESS = True
+
 BROWSER_COLOR = _color['dark_brown']
 
 THEME = 'themes/flex'

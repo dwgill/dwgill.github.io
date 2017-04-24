@@ -1,6 +1,6 @@
 title: This Blog Runs on Pelican
 Date: 2017-04-21 13:53
-Modified: 2017-04-21 15:19
+Modified: 2017-04-24 10:51
 Category: code
 Tags: code, python, personal projects
 Slug: this-blog-runs-on-pelican
@@ -26,7 +26,7 @@ Pelican has a pretty simple quickstart process, which can be found
 [here][pelican-quickstart]. Altogether my first steps looked like the
 following:
 
-
+    :::shell
     cd <project_dir>
     virtualenv .venv
     source .venv/bin/activate
@@ -60,6 +60,7 @@ the devil you're supposed to handle a Git submodule.
 
 I added the flex repo to my project like so:
 
+    :::shell
     mkdir themes
     git submodule add https://github.com/alexandrevicenzi/Flex themes/flex
 
@@ -70,12 +71,14 @@ case when a new submodule is added that you still need to initiate the
 process of cloning/checking out the repo. You can do this with the
 following:
 
+    :::shell
     git submodule update --init themes/flex
 
 With that command the entire contents of the [Flex][flex] repo should
 be in the local directory `themes/flex`, which means I can now add the
 theme to my Pelican configuration `pelicanconf.py`:
 
+    :::python
     THEME = 'themes/flex'
 
 The theme is straightforward enough, but not as documented as it could
@@ -84,6 +87,7 @@ be, and I'm having to figure out some details by looking at the
 to explicitly enable & configure the menu menu at the top of the page;
 it doesn't just list whatever 'pages' you have on your site:
 
+    :::python
     MAIN_MENU = True
     MENUITEMS = (
         ('Archives', '/archives.html'),
@@ -96,6 +100,7 @@ how you configure it for Pelican sites in general—I found that the
 Favicon could be configured by setting the `FAVICON` variable in my
 configuration, like so:
 
+    :::python
     PATH = 'content'
     STATIC_PATHS = ['images']
     FAVICON = '/images/favicon-red.ico'
@@ -130,6 +135,7 @@ the corner of the documentation it's hidden in).
 So, all told my configuration for github pages amounts to these lines in
 my publish config file.
 
+    :::python
     _use_custom_domain = True
     if _use_custom_domain:
         SITEURL = 'http://dwgill.com'

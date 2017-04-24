@@ -14,6 +14,7 @@ from pelicanconf import *
 # Relative URLs break RSS & Atom feeds
 RELATIVE_URLS = False
 
+USE_LESS = False
 
 DELETE_OUTPUT_DIRECTORY = True
 
