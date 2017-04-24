@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tetrahedrons &amp; Terminals - code</title><link href="http://dwgill.com/" rel="alternate"></link><link href="http://dwgill.com/feeds/code.atom.xml" rel="self"></link><id>http://dwgill.com/</id><updated>2017-04-21T15:19:00-04:00</updated><entry><title>This Blog Runs on Pelican</title><link href="http://dwgill.com/posts/2017/04/21/this-blog-runs-on-pelican/" rel="alternate"></link><published>2017-04-21T13:53:00-04:00</published><updated>2017-04-21T15:19:00-04:00</updated><author><name>Daniel Gill</name></author><id>tag:dwgill.com,2017-04-21:/posts/2017/04/21/this-blog-runs-on-pelican/</id><summary type="html">&lt;p&gt;A detailed breakdown of how this blog is coded &amp;amp; built&lt;/p&gt;</summary><content type="html">&lt;p&gt;This blog is built using the &lt;a href="https://blog.getpelican.com/"&gt;Pelican&lt;/a&gt; static site generator,
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tetrahedrons &amp; Terminals - code</title><link href="http://dwgill.com/" rel="alternate"></link><link href="http://dwgill.com/feeds/code.atom.xml" rel="self"></link><id>http://dwgill.com/</id><updated>2017-04-24T10:51:00-04:00</updated><entry><title>This Blog Runs on Pelican</title><link href="http://dwgill.com/posts/2017/04/21/this-blog-runs-on-pelican/" rel="alternate"></link><published>2017-04-21T13:53:00-04:00</published><updated>2017-04-24T10:51:00-04:00</updated><author><name>Daniel Gill</name></author><id>tag:dwgill.com,2017-04-21:/posts/2017/04/21/this-blog-runs-on-pelican/</id><summary type="html">&lt;p&gt;A detailed breakdown of how this blog is coded &amp;amp; built&lt;/p&gt;</summary><content type="html">&lt;p&gt;This blog is built using the &lt;a href="https://blog.getpelican.com/"&gt;Pelican&lt;/a&gt; static site generator,
 written in &lt;a href="https://en.wikipedia.org/wiki/Python_(programming_language)"&gt;Python&lt;/a&gt;, and utilizes the &lt;a href="https://github.com/alexandrevicenzi/Flex"&gt;Flex&lt;/a&gt; pelican theme.
 I'm actually writing this post as I set up the site for the first time,
 partially so that I can document everything for myself, and hopefully
@@ -15,9 +15,9 @@ files and host them anywhere I like—on my own server, or on
 &lt;p&gt;Pelican has a pretty simple quickstart process, which can be found
 &lt;a href="http://docs.getpelican.com/en/stable/install.html"&gt;here&lt;/a&gt;. Altogether my first steps looked like the
 following:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cd &amp;lt;project_dir&amp;gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; &amp;lt;project_dir&amp;gt;
 virtualenv .venv
-source .venv/bin/activate
+&lt;span class="nb"&gt;source&lt;/span&gt; .venv/bin/activate
 pip install pelican markdown
 pelican-quickstart
 &lt;/pre&gt;&lt;/div&gt;
@@ -63,7 +63,7 @@ following:&lt;/p&gt;
 &lt;p&gt;With that command the entire contents of the &lt;a href="https://github.com/alexandrevicenzi/Flex"&gt;Flex&lt;/a&gt; repo should
 be in the local directory &lt;code&gt;themes/flex&lt;/code&gt;, which means I can now add the
 theme to my Pelican configuration &lt;code&gt;pelicanconf.py&lt;/code&gt;:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;THEME = &amp;#39;themes/flex&amp;#39;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;THEME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;themes/flex&amp;#39;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -72,12 +72,12 @@ be, and I'm having to figure out some details by looking at the
 &lt;a href="https://github.com/alexandrevicenzi/Flex/blob/master/tests/pelicanconf.py"&gt;test configuration&lt;/a&gt;. For example, it turns out you need
 to explicitly enable &amp;amp; configure the menu menu at the top of the page;
 it doesn't just list whatever 'pages' you have on your site:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;MAIN_MENU = True
-MENUITEMS = (
-    (&amp;#39;Archives&amp;#39;, &amp;#39;/archives.html&amp;#39;),
-    (&amp;#39;Categories&amp;#39;, &amp;#39;/categories.html&amp;#39;),
-    (&amp;#39;Tags&amp;#39;, &amp;#39;/tags.html&amp;#39;),
-)
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;MAIN_MENU&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;
+&lt;span class="n"&gt;MENUITEMS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Archives&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;/archives.html&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Categories&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;/categories.html&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Tags&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;/tags.html&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -85,9 +85,9 @@ MENUITEMS = (
 how you configure it for Pelican sites in general—I found that the
 Favicon could be configured by setting the &lt;code&gt;FAVICON&lt;/code&gt; variable in my
 configuration, like so:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;PATH = &amp;#39;content&amp;#39;
-STATIC_PATHS = [&amp;#39;images&amp;#39;]
-FAVICON = &amp;#39;/images/favicon-red.ico&amp;#39;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;PATH&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;content&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;STATIC_PATHS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;images&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;FAVICON&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;/images/favicon-red.ico&amp;#39;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -115,17 +115,17 @@ documentation lays that out&lt;/a&gt; pretty neatly (once you find
 the corner of the documentation it's hidden in).&lt;/p&gt;
 &lt;p&gt;So, all told my configuration for github pages amounts to these lines in
 my publish config file.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;_use_custom_domain = True
-if _use_custom_domain:
-    SITEURL = &amp;#39;http://dwgill.com&amp;#39;
-    try:
-        STATIC_PATHS += [&amp;#39;extra/CNAME&amp;#39;]
-    except NameError: # STATIC_PATHS wasn&amp;#39;t defined
-        STATIC_PATHS = [&amp;#39;extra/CNAME&amp;#39;]
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;_use_custom_domain&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;_use_custom_domain&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;SITEURL&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;http://dwgill.com&amp;#39;&lt;/span&gt;
+    &lt;span class="k"&gt;try&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;STATIC_PATHS&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;extra/CNAME&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+    &lt;span class="k"&gt;except&lt;/span&gt; &lt;span class="ne"&gt;NameError&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="c1"&gt;# STATIC_PATHS wasn&amp;#39;t defined&lt;/span&gt;
+        &lt;span class="n"&gt;STATIC_PATHS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;extra/CNAME&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 
-    EXTRA_PATH_METADATA = {&amp;#39;extra/CNAME&amp;#39;: {&amp;#39;path&amp;#39;: &amp;#39;CNAME&amp;#39;}}
-else:
-    SITEURL = &amp;#39;https://dwgill.github.io&amp;#39;
+    &lt;span class="n"&gt;EXTRA_PATH_METADATA&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;extra/CNAME&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;path&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;CNAME&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;}}&lt;/span&gt;
+&lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;SITEURL&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;https://dwgill.github.io&amp;#39;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 

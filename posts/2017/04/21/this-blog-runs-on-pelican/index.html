@@ -43,7 +43,7 @@
 <meta property="og:url" content="http://dwgill.com/posts/2017/04/21/this-blog-runs-on-pelican/"/>
 <meta property="og:type" content="article"/>
 <meta property="article:published_time" content="2017-04-21 13:53:00-04:00"/>
-<meta property="article:modified_time" content="2017-04-21 15:19:00-04:00"/>
+<meta property="article:modified_time" content="2017-04-24 10:51:00-04:00"/>
 <meta property="article:author" content="http://dwgill.com/author/daniel-gill.html">
 <meta property="article:section" content="code"/>
 <meta property="article:tag" content="code"/>
@@ -123,9 +123,9 @@ files and host them anywhere I like—on my own server, or on
 <p>Pelican has a pretty simple quickstart process, which can be found
 <a href="http://docs.getpelican.com/en/stable/install.html">here</a>. Altogether my first steps looked like the
 following:</p>
-<div class="highlight"><pre><span></span>cd &lt;project_dir&gt;
+<div class="highlight"><pre><span></span><span class="nb">cd</span> &lt;project_dir&gt;
 virtualenv .venv
-source .venv/bin/activate
+<span class="nb">source</span> .venv/bin/activate
 pip install pelican markdown
 pelican-quickstart
 </pre></div>
@@ -171,7 +171,7 @@ following:</p>
 <p>With that command the entire contents of the <a href="https://github.com/alexandrevicenzi/Flex">Flex</a> repo should
 be in the local directory <code>themes/flex</code>, which means I can now add the
 theme to my Pelican configuration <code>pelicanconf.py</code>:</p>
-<div class="highlight"><pre><span></span>THEME = &#39;themes/flex&#39;
+<div class="highlight"><pre><span></span><span class="n">THEME</span> <span class="o">=</span> <span class="s1">&#39;themes/flex&#39;</span>
 </pre></div>
 
 
@@ -180,12 +180,12 @@ be, and I'm having to figure out some details by looking at the
 <a href="https://github.com/alexandrevicenzi/Flex/blob/master/tests/pelicanconf.py">test configuration</a>. For example, it turns out you need
 to explicitly enable &amp; configure the menu menu at the top of the page;
 it doesn't just list whatever 'pages' you have on your site:</p>
-<div class="highlight"><pre><span></span>MAIN_MENU = True
-MENUITEMS = (
-    (&#39;Archives&#39;, &#39;/archives.html&#39;),
-    (&#39;Categories&#39;, &#39;/categories.html&#39;),
-    (&#39;Tags&#39;, &#39;/tags.html&#39;),
-)
+<div class="highlight"><pre><span></span><span class="n">MAIN_MENU</span> <span class="o">=</span> <span class="bp">True</span>
+<span class="n">MENUITEMS</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="p">(</span><span class="s1">&#39;Archives&#39;</span><span class="p">,</span> <span class="s1">&#39;/archives.html&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;Categories&#39;</span><span class="p">,</span> <span class="s1">&#39;/categories.html&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;Tags&#39;</span><span class="p">,</span> <span class="s1">&#39;/tags.html&#39;</span><span class="p">),</span>
+<span class="p">)</span>
 </pre></div>
 
 
@@ -193,9 +193,9 @@ MENUITEMS = (
 how you configure it for Pelican sites in general—I found that the
 Favicon could be configured by setting the <code>FAVICON</code> variable in my
 configuration, like so:</p>
-<div class="highlight"><pre><span></span>PATH = &#39;content&#39;
-STATIC_PATHS = [&#39;images&#39;]
-FAVICON = &#39;/images/favicon-red.ico&#39;
+<div class="highlight"><pre><span></span><span class="n">PATH</span> <span class="o">=</span> <span class="s1">&#39;content&#39;</span>
+<span class="n">STATIC_PATHS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;images&#39;</span><span class="p">]</span>
+<span class="n">FAVICON</span> <span class="o">=</span> <span class="s1">&#39;/images/favicon-red.ico&#39;</span>
 </pre></div>
 
 
@@ -223,17 +223,17 @@ documentation lays that out</a> pretty neatly (once you find
 the corner of the documentation it's hidden in).</p>
 <p>So, all told my configuration for github pages amounts to these lines in
 my publish config file.</p>
-<div class="highlight"><pre><span></span>_use_custom_domain = True
-if _use_custom_domain:
-    SITEURL = &#39;http://dwgill.com&#39;
-    try:
-        STATIC_PATHS += [&#39;extra/CNAME&#39;]
-    except NameError: # STATIC_PATHS wasn&#39;t defined
-        STATIC_PATHS = [&#39;extra/CNAME&#39;]
+<div class="highlight"><pre><span></span><span class="n">_use_custom_domain</span> <span class="o">=</span> <span class="bp">True</span>
+<span class="k">if</span> <span class="n">_use_custom_domain</span><span class="p">:</span>
+    <span class="n">SITEURL</span> <span class="o">=</span> <span class="s1">&#39;http://dwgill.com&#39;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">STATIC_PATHS</span> <span class="o">+=</span> <span class="p">[</span><span class="s1">&#39;extra/CNAME&#39;</span><span class="p">]</span>
+    <span class="k">except</span> <span class="ne">NameError</span><span class="p">:</span> <span class="c1"># STATIC_PATHS wasn&#39;t defined</span>
+        <span class="n">STATIC_PATHS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;extra/CNAME&#39;</span><span class="p">]</span>
 
-    EXTRA_PATH_METADATA = {&#39;extra/CNAME&#39;: {&#39;path&#39;: &#39;CNAME&#39;}}
-else:
-    SITEURL = &#39;https://dwgill.github.io&#39;
+    <span class="n">EXTRA_PATH_METADATA</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;extra/CNAME&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;path&#39;</span><span class="p">:</span> <span class="s1">&#39;CNAME&#39;</span><span class="p">}}</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">SITEURL</span> <span class="o">=</span> <span class="s1">&#39;https://dwgill.github.io&#39;</span>
 </pre></div>
 
 
