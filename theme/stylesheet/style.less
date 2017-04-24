@@ -122,15 +122,27 @@ main {
     font-size: .72em;
     padding: 14px 0 14px 0;
     border-bottom: @nav-border-color 1px solid;
+  }
 
+  nav, .translations {
     a {
       padding: 0 4px 0 4px;
+      border-left: @nav-border-color 1px solid;
       border-right: @nav-border-color 1px solid;
     }
 
     :first-child {
-      border-left: @nav-border-color 1px solid;
+      border-left: none;
     }
+
+    :last-child {
+      border-right: none;
+    }
+  }
+
+  .neighbors {
+    margin: 4% 0% 4% 0%;
+    height: 20px;
   }
 
   .pagination {
@@ -155,6 +167,14 @@ main {
       p {
         color: @header-text-color;
         font-size: 0.86em;
+      }
+
+      .translations {
+        float: right;
+
+        .active {
+          font-weight: 600;
+        }
       }
     }
 
@@ -382,6 +402,10 @@ ul.social {
 
   a.sc-stack-overflow {
     background-color: @stack-overflow-bg-color;
+  }
+
+  a.sc-tumblr {
+    background-color: @tumblr-bg-color;
   }
 
   a.sc-twitter {
