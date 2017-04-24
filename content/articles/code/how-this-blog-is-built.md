@@ -1,6 +1,6 @@
 title: This Blog Runs on Pelican
 Date: 2017-04-21 13:53
-Modified: 2017-04-24 10:51
+Modified: 2017-04-24 11:00
 Category: code
 Tags: code, python, personal projects
 Slug: this-blog-runs-on-pelican
@@ -34,7 +34,7 @@ following:
     pelican-quickstart
 
 
-That was straightforward enough (the living hell of trying to figure)
+That was straightforward enough (the living hell of trying to figure
 out a name for this blog notwithstanding), but the next step was
 bettering the look of the site. The default look of Pelican is not the
 greatest. For example, [here][pelican-site] is the official Pelican
