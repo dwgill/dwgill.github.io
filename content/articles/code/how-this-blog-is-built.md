@@ -1,4 +1,4 @@
-title: This Blog Runs on Pelican
+Title: This Blog Runs on Pelican
 Date: 2017-04-21 13:53
 Modified: 2017-04-24 11:00
 Category: code

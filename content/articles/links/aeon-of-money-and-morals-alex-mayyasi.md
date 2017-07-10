@@ -1,0 +1,65 @@
+Title: Aeon: Of Money and Morals
+Date: 2017-07-07 11:24
+Modified: 2017-07-07 11:24
+Category: links
+Tags: link, aeon, alex mayyasi, philosophy, economics, history, ethics
+Slug: link-aeon-of-money-and-morals-alex-mayyasi
+Authors: Daniel Gill
+Summary: An interesting article on the history of the ethics of moneylending
+
+[Aeon recently published an fascinating essay on the history of ethical thought
+around moneylending][article_link], particularly the practice of
+[_usury_][usury_wiki], or lending money with interest. The primary contention
+of the article is that ethical philosophers and theologians used to extensively
+consider and write on the ethics of business and finance, but that's largely
+left to economists, who since the 20th century have largely forgone conducting
+ethical assessments in lieue of becoming scientists of economic phenomena.
+
+> It wasn’t until the rise of neoclassical economics in the 20th century that
+> economics became the supposedly scientific study of self-interest and individual
+> incentives – a domain in which economists do not pass judgment on actors in the
+> market, any more than biologists would judge the ‘morality’ of bees, or
+> engineers the ‘ethics’ of an aqueduct.
+
+Alex Mayyasi would like the moral philosophers and theologians to once again
+consider at length the ethical questions surrounding individual financial
+arrangements and economic phenomena. It's a very interesting idea, and I recommend
+the essay.
+
+What's also so interesting to me, however, is just how much of a gap there seems
+to be between a modern conception of interest-laden loans and what seems to have
+been a nearly-universal condemnation of the practice.
+
+> In de Vitry’s world, the moneylender deserved to be defiled by demons, because
+> he’d committed the sin of usury – charging interest on a loan. De Vitry didn’t
+> care whether the rate was high or low, because the Church’s position was that
+> extracting a single cent of interest was evil. The roots of this revulsion
+> run deep, and across cultures. Vedic law in Ancient India condemned usury, and
+> rulers routinely capped interest rates from Ancient Mesopotamia to Ancient Greece.
+> In _Politics_, Aristotle described usury as ‘the birth of money from money’, and
+> claimed it was unnatural because money was sterile and should not ‘breed’.
+> 
+> Judeo-Christian religions cemented the usury taboo. The Old Testament reads:
+> ‘Do not charge a fellow Israelite interest,’ and the Book of Luke advises:
+> ‘[L]ove ye your enemies: do good, and lend, hoping for nothing thereby.’ In
+> the 4th century CE, Christian councils denounced the practice, and by 800,
+> the emperor Charlemagne made the prohibition into law. Accounts of merchants
+> and bankers in the Middle Ages frequently include expressions of anguish over
+> their profits. In his Divine Comedy of the 14th century, the Italian poet
+> Dante Alighieri put the usurers in the seventh circle of Hell; in the case of
+> Reginaldo Scrovegni, one Paduan banker singled out by Dante, his son ended up
+> commissioning a chapel painted with frescoes by Giotto to expiate the
+> family’s sin. Over the ensuing centuries, the philanthropy and patronage of
+> other Italian Renaissance families such as the Medicis was partly inspired by
+> guilt about how they’d profited from charging interest.
+
+It seems that until at least the reformation, offering a loan with interest
+was inconceivable as anything but inherently exploitative. An interesting
+example of how much moral values have shifted over time, and a reminder that
+ethical considerations have as much to do with the meaning and values we
+ascribe to the things under consideration as they do with anything else.
+Think of Aristotle's conception of money as "sterile," and how the sum-total
+of his condemnation of interest stems from it.
+
+[article_link]: https://aeon.co/essays/how-did-usury-stop-being-a-sin-and-become-respectable-finance
+[usury_wiki]: https://en.wikipedia.org/wiki/Usury
