@@ -83,7 +83,6 @@ LINKS = [
 
 # Social widget
 SOCIAL = [
-    ('tumblr', 'https://dwgill.tumblr.com'),
     ('twitter', 'https://twitter.com/danwgill'),
 ]
 
