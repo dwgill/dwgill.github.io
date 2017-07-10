@@ -13,6 +13,15 @@ Then, in development, one can preview changes to the site with
 
     make clean && make html && make serve
 
-That should run a local server on port 8000. Publishing to Github is similarly a matter of
+That should run a local server on port 8000.
 
-    make clean && make publish
+`make html` Should produce the "dev" codebase, `make publish` should produce
+the "production" codebase. The primary difference between the two is that the
+"dev" output just follows the configuration specified in `pelicanconf.py`,
+whereas the "production" build follows the `publishconf.py` configuration,
+which mimics the `pelicanconf.py` configuration and only specifies where it
+differs.
+
+Anyhow, publishing to github is then a matter of
+
+    make clean && make github
