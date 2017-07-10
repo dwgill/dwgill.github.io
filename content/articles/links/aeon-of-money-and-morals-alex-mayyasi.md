@@ -1,6 +1,6 @@
 Title: Aeon: Of Money and Morals
-Date: 2017-07-07 11:24
-Modified: 2017-07-07 11:24
+Date: 2017-07-10 10:15
+Modified: 2017-07-10 10:15
 Category: links
 Tags: link, aeon, alex mayyasi, philosophy, economics, history, ethics
 Slug: link-aeon-of-money-and-morals-alex-mayyasi
